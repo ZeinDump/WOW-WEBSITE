@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="favicon.jpg" />
+    <title>WOW WEBSITE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <style>
+      
+      body {
+          background-image: url("https://wallpapers.com/images/high/lavender-pastel-purple-aesthetic-background-d1vv0kd9mvlkcf84.webp");
+			    		background-repeat: no-repeat;
+		    			background-position: center;
+		    			background-attachment: fixed;
+			    		background-size: cover;
+								font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+     	 }
+
+        .container {
+          display: flex;
+  						 justify-content: center;
+   					 align-items: center;
+        }
+
+        .envelope {
+        			position: fixed;
+  								inset: 0px;
+  								width: 320px;
+  								height: 200px;
+  								max-width: 100vw;
+  								max-height: 100dvh;
+  								margin: auto;				
+           background-color: #DC84F3;
+           border: 2px solid #DC84F3;
+           border-radius: 5px;
+           overflow: hidden;
+           transition: transform 1s ease, opacity 1s ease;
+         		
+        }
+
+        .envelope .flap {
+           position: fixed;
+  								inset: 0px;
+  								width: 320px;
+  								height: 200px;
+  								max-width: 100vw;
+  								max-height: 100dvh;
+  								margin: auto;	
+           background-color: #E9A8F2;
+									border: 2px solid #E9A8F2;
+           clip-path: polygon(0 0, 100% 0, 50% 50%);
+           transition: transform 0.6s ease;
+           transform-origin: top;
+        }
+
+        .letter {
+           position: fixed;
+  								inset: 0px;
+  								width: 285px;
+  								height:540px;
+  								max-width: 100vw;
+  								max-height: 100dvh;
+  						 		margin: auto;
+           background-color: white;
+           top: 100%;
+           left: 50%;
+           transform: translateX(-50%);
+           padding: 20px;
+           font-family: Montserrat,Arial, sans-serif;
+           font-size: 11px;
+           text-align: left;
+           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+           opacity: 0;
+           transition: top 1s ease, opacity 1s ease;
+          
+        }
+
+      .h1{
+          font-family: Times New Roman,Arial, sans-serif;
+           font-size: 40px;
+           text-align: center;
+          font-weight: bold;
+          font-style: italic;
+      }
+      
+        .envelope.open {
+            transform: translateY(150%);
+            opacity: 0;
+        }
+
+        .envelope.open .flap {
+            transform: rotateX(-180deg);
+        }
+
+        .envelope.open ~ .letter {
+            top: 0;
+            opacity: 1;
+        }
+
+        .letter.return {
+            top: 100%;
+            opacity: 0;
+        }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="envelope" onclick="toggleOpen(this)">
+        <div class="flap"></div>
+      </div>
+      <div class="letter" onclick="toggleReturn(this)">
+          <div class="h1"<h1>HI AL AL <3</h1></div><br>
+              Sabi sa tiktok "Take the risk or lose the chance" I think "or" nalang. EME <br><br>
+              I don't know if you know this already, but I would still tell this to you. I'm going to be honest this time, I like you. I don't have any crush from other school or what. It's you, it's you when you asked me before.<br><br> 
+              Maybe, after many months of hiding these feelings, it's time to tell you about this. Like it started in March, that time I'm so indenial about my feelings, but that time one thing is for sure, you really caught my attention. I really don't know the reason why I realized I like you, but that time I really felt that you're a genuine person.<br><br> 
+              That admiration helped me, especially in acads. You really became my inspiration to work better and harder in my acads. I'm so very happy that we became close friends and that there's a friendship being formed between us and our interactions. The moments that I had spent with you became a core memory in my heart. I really want to tell you about how I feel. I hope after this our friendship will still be okay. I'm really scared for our friendship, but yeah.<br><br> 
+              I'm not really expecting any reciprocation, but if I were given a chance, I would not waste that. I'll court, pursue, and wait for you until you're ready. I will not be a distraction to you, and I'll respect you. Whatever your decision, I'll respect it. I'm not expecting your immediate response, don't pressure yourself in this confession.<br><br>
+              So wala ayun lang, god bless.
+          </div>
+    </div>
+
+    <script>
+      function toggleOpen(envelope)
+      {
+        envelope.classList.toggle('open');
+      }
+
+      function toggleReturn(letter)
+      {
+        const envelope = document.querySelector('.envelope');
+        if (letter.classList.contains('return'))
+        {
+          letter.classList.remove('return');
+          envelope.classList.add('open');
+        }
+        else
+        {
+          letter.classList.add('return');
+          envelope.classList.remove('open');
+        }
+      }
+    </script>
+
+  </body>
+
+</html>
+
+<!--
+Visual Code Mobile
+Developed By Manish Nirmal
+App Available on Play Store :-
+https://play.google.com/store/apps/details?id=lk.visual.code.mobile
+YouTube :-
+https://youtube.com/ManishNirmal
+-->

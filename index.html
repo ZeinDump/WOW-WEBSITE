@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="favicon.jpg" />
+
+    <title>WOW WEBSITE</title>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Please Login</h1>
+      <input type="text" id="loginBox" placeholder="Enter your name">
+      <br>
+      <button id="loginButton">Login</button>
+    </div>
+
+    <style>
+      body {
+          background-image: url("https://wallpapers.com/images/high/lavender-pastel-purple-aesthetic-background-d1vv0kd9mvlkcf84.webp");
+			    		background-repeat: no-repeat;
+		    			background-position: center;
+		    			background-attachment: fixed;
+			    		background-size: cover;
+								font-family: Times New Roman, Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+      }
+  
+      .container {
+          background: #b57edc;
+								border: 5px solid #000000;
+          padding: 20px;
+          border-radius: 5px;
+          text-align: center;
+        font-family: Times New Roman, Arial, sans-serif;
+      }
+  
+      #loginBox {
+          border: 1px solid #000000;
+								background: #b57edc;
+								margin-bottom: 10px;
+        font-family: Times New Roman, Arial, sans-serif;
+      }
+      ::placeholder{
+							color: #000000;
+					}
+
+      #loginButton {
+          padding: 5px 20px;
+          border: none;
+          background-color: #4b1c71;
+          color: white;
+          border-radius: 5px;
+          cursor: pointer;
+          font-family: Times New Roman, Arial, sans-serif;
+      }
+    </style>
+
+    <script>
+      const loginButton = document.getElementById('loginButton');
+      
+      // List of allowed names
+      const allowedNames = ['almira', 'almira jucutan', 'jucutan', 'al al'];
+
+      loginButton.addEventListener('click', function() {
+        const name = document.getElementById('loginBox').value.toLowerCase();
+
+        // Check if the name is in the allowed list
+        if (allowedNames.includes(name)) {
+          alert('Login successful! Redirecting to another page.');
+          window.location.href = 'RIM2.html';
+        } else {
+          alert('Invalid name! Please try again.');
+        }
+      });
+    </script>
+  </body>
+
+</html>
